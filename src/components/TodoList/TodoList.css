@@ -1,0 +1,80 @@
+.todoList {
+    display: flex;
+    column-gap: 10px;
+    padding: 5px;
+    & .resisable {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: -5px;
+        top: 230px;
+        width: 10px;
+        height: 40px;
+        border: 2px solid black;
+        background-color: white;
+    }    
+    & .todoList_tasks {
+        resize: horizontal;
+        height: 500px;
+        min-width: 200px;
+        border: 1px solid black;
+        position: relative;
+    }
+    & .task {
+        font-weight: 700;
+        display: grid;
+        grid-template-columns: 10fr 1fr;
+        & .taskTitle {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+}
+
+.todoList_manage {
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    display: grid;
+    & .edit {
+        & .editForm {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            & .titles {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 10px;
+            }
+            & .content {
+                display: grid;
+                row-gap: 10px;
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+    & .add {
+        & .addForm {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            & .titles {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 10px;
+            }
+            & .content {
+                display: grid;
+                row-gap: 10px;
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+button {
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+}
